@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    background-color: $white;
+}
+
+img {
+   max-width: 100%;
+   max-height: 100%; 
+}
+
+a {
+    cursor: pointer;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    //windscreen//
+    max-width: #{$desktop + 'px'};
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@include media($desktop) {
+    .container {
+        max-width: #{$small-desktop + 'px'};
+    }
+}
+
+@include media($small-desktop) {
+    .container {
+        max-width: #{$laptop + 'px'};
+    }
+}
+
+@include media($laptop) {
+    .container {
+        max-width: #{$tablet + 'px'};
+    }
+}
+
+@include media($tablet) {
+    .container {
+        max-width: #{$mobile + 'px'};
+    }
+}
