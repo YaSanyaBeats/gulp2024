@@ -41,7 +41,7 @@ const scss = () => {
                 )
             )
             .pipe(gulp.dest(filePaths.build.css))
-            
+
             /** Раскомментировать если нужен сжатый дубль файла стилей */
             //.pipe(plugins.if(isBuild, cleanCss()))
             //.pipe(rename({ extname: '.min.css' }))
